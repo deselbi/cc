@@ -1,0 +1,13 @@
+# vim:set ft=yaml expandtab ts=2 sw=2 ai:
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wordpress
+spec:
+  rules:
+    - host: wpexample.com
+      http:
+        paths:
+          - backend:
+              serviceName: wordpress
+              servicePort: 80
